@@ -25,7 +25,7 @@ export default function Navbar() {
             component="div"
             sx={{ flexGrow: 1, fontWeight: 'bold', cursor: 'pointer' }}
           >
-            App
+            Bakhabar Kisan
           </Typography>
 
           {/* Desktop View */}
