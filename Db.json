@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": "1731006813523",
+      "title": "cccc",
+      "content": "mmmm"
+    },
+    {
+      "id": "1731007040712",
+      "title": "   u",
+      "content": "mm"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "Comment 1",
+      "postId": 1
+    },
+    {
+      "id": "2",
+      "body": "Comment 2",
+      "postId": 2
+    }
+  ]
+}
