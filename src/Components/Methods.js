@@ -14,7 +14,7 @@ export default function GetUsers() {
 
   const fetchData = () => {
     setLoading(true);  // Start loading
-    axios.get('http://localhost:5000/posts')
+    axios.get('https://fakestoreapi.com/products')
       .then(response => {
         setData(response.data);
         setLoading(false);  // End loading
@@ -30,7 +30,7 @@ export default function GetUsers() {
   }, []);
 
   const handleAdd = (newPost) => {
-    axios.post('http://localhost:5000/posts', newPost)
+    axios.post('https://fakestoreapi.com/products', newPost)
       .then(fetchData)
       .catch(error => console.error('Error adding data:', error));
     setOpenAdd(false);
@@ -38,14 +38,14 @@ export default function GetUsers() {
 
   const handleUpdate = (updatedPost) => {
     console.log(updatedPost)
-    axios.put(`http://localhost:5000/posts/${updatedPost.id}`, updatedPost)
+    axios.put(`https://fakestoreapi.com/products/${updatedPost.id}`, updatedPost)
       .then(fetchData)
       .catch(error => console.error('Error updating data:', error));
     setOpenUpdate(false);
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:5000/posts/${id}`)
+    axios.delete(`https://fakestoreapi.com/products/${id}`)
       .then(fetchData)
       .catch(error => console.error('Error deleting data:', error));
   };

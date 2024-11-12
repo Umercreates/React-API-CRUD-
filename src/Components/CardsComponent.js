@@ -1,6 +1,19 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Box, Grid, Card, CardContent, CardActions, Typography, Button, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@mui/material';
+import Grid from '@mui/material/Grid';
+import { 
+  Box, 
+  Card, 
+  CardContent, 
+  CardActions, 
+  Typography, 
+  Button, 
+  Dialog, 
+  DialogTitle, 
+  DialogContentText, // Correct component
+  DialogActions 
+} from '@mui/material';
+
 
 const CardsComponent = ({ data, onEdit, onDelete }) => {
   const [openDialog, setOpenDialog] = useState(false);
@@ -35,7 +48,7 @@ const CardsComponent = ({ data, onEdit, onDelete }) => {
                   {item.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  {item.content}
+                  {item.description}
                 </Typography>
               </CardContent>
               <CardActions sx={{ justifyContent: 'space-between', paddingX: 1.5 }}>
@@ -76,21 +89,19 @@ const CardsComponent = ({ data, onEdit, onDelete }) => {
 
       {/* Confirmation Dialog */}
       <Dialog open={openDialog} onClose={handleCancelDelete}>
-        <DialogTitle>Confirm Deletion</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            Are you sure you want to permanently delete this post?
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleCancelDelete} color="primary">
-            Cancel
-          </Button>
-          <Button onClick={handleDelete} color="error">
-            Confirm
-          </Button>
-        </DialogActions>
-      </Dialog>
+  <DialogTitle>Confirm Deletion</DialogTitle>
+  <DialogContentText> 
+    Are you sure you want to permanently delete this post?
+  </DialogContentText>
+  <DialogActions>
+    <Button onClick={handleCancelDelete} color="primary">
+      Cancel
+    </Button>
+    <Button onClick={handleDelete} color="error">
+      Confirm
+    </Button>
+  </DialogActions>
+</Dialog>
     </Box>
   );
 };

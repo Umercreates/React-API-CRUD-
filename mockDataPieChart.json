@@ -1,0 +1,16 @@
+{
+  "years": [
+    { "title": "2012", "someValueField": 320 },
+  { "title": "2013", "someValueField": 332 },
+  { "title": "2014", "someValueField": 301 },
+  { "title": "2015", "someValueField": 334 },
+  { "title": "2016", "someValueField": 390 }
+  ],
+  "posts": [
+    { "id": 1, "title": "Search Engine", "value": 1048 },
+    { "id": 2, "title": "Direct", "value": 735 },
+    { "id": 3, "title": "Email", "value": 580 },
+    { "id": 4, "title": "Union Ads", "value": 484 },
+    { "id": 5, "title": "Video Ads", "value": 300 }
+  ]
+}

@@ -3,7 +3,7 @@ import { Dialog, DialogActions, DialogContent, DialogTitle, TextField, Button } 
 import PropTypes from 'prop-types';
 
 const UpdateData = ({ open, selectedItem, onClose, onUpdate }) => {
-  const [updatedItem, setUpdatedItem] = useState({ title: '', content: '' });
+  const [updatedItem, setUpdatedItem] = useState({ title: '', description: '' });
 
   useEffect(() => {
     if (selectedItem) {
@@ -11,7 +11,7 @@ const UpdateData = ({ open, selectedItem, onClose, onUpdate }) => {
       setUpdatedItem({
         id: selectedItem.id,
         title: selectedItem.title,
-        content: selectedItem.content,
+        description: selectedItem.description,
       });
     }
   }, [selectedItem]);
@@ -41,9 +41,9 @@ const UpdateData = ({ open, selectedItem, onClose, onUpdate }) => {
           margin="normal"
         />
         <TextField
-          label="Content"
-          name="content"
-          value={updatedItem.content}
+          label="Description"
+          name="description"
+          value={updatedItem.description}
           onChange={handleChange}
           fullWidth
           margin="normal"

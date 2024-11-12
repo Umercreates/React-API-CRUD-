@@ -4,12 +4,12 @@ import { Dialog, DialogTitle, DialogContent, DialogActions, TextField, Button } 
 
 const AddData = ({ open, onClose, onAdd }) => {
   const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
+  const [description, setDescription] = useState('');
 
   const handleAddClick = () => {
-    onAdd({ title, content });
+    onAdd({ title, description });
     setTitle('');
-    setContent('');
+    setDescription('');
     onClose();
   };
 
@@ -25,9 +25,9 @@ const AddData = ({ open, onClose, onAdd }) => {
           sx={{ marginBottom: 2 }}
         />
         <TextField
-          label="Content"
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
+          label="Descriptiont"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
           fullWidth
           multiline
           rows={4}

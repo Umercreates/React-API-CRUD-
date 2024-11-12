@@ -12,18 +12,20 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
+    "echarts": "^5.5.1",
     "formik": "^2.4.6",
-    "json-server": "^1.0.0-beta.3",
+    "leaflet": "^1.9.4",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
     "react-dom": "^18.3.1",
+    "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.27.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
     "yup": "^1.4.0"
   },
   "scripts": {
-    "server": "json-server --watch Db.json --port 5000",
+    "server": "json-server --watch mockDataPieChart.json --port 5000",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -46,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.3"
   }
 }
